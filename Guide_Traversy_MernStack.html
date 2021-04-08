@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gide</title>
+</head>
+<body>
+	<ul>
+		                                          <li>Links</li>
+		<li>https://github.com/bradtraversy/mern_shopping_list</li> 
+		<li>https://reactstrap.github.io/components/alerts/</li> 
+		<li>https://cloud.mongodb.com/    alirazamuneer5 wala acc pa database ha</li>  
+
+		                                          <li>Server Build</li>
+		<li>Create a server basic with express</li>
+		<li>Connect a moogose database by URI</li>
+		<li>Creating a schema(Model)      using mongoose & Scheme</li>
+		<li>Then create a route of (/api/items) in server.js then work on api folder/items </li>
+		<li>Ceate get/post/delete router   ---- query for model like Item.find(),newItem.save(),Item.findById(req.params.id).remove()</li>
+
+
+		                                       <li>React Front End</li>
+		<li>Combine back/front end with concurrently & ---prefix  & proxy in client folder</li>
+		<li>Work on AppNavBar  ---- copy from reactStrap website  </li>
+		<li>Work on ShoppingList file create State{items:[ {} ]} 
+		    button for additem(work on onClick(prompt , setState))
+		    Map the items for  State{items:[ {} ]}
+		    Work on delete the item by filter <button>onClick</button></li>
+
+		                                          <li>Work on Redux</li>
+		<li>action,type,reducer,store,provider,</li>
+		<li>Creating a store first   --- applyMiddleware,thunk,compose,rootReducer</li>
+		<li>Provider on App.js file with store</li>
+		<li>Work on Reducer index.js  
+		    then itemReducer file creating initialState then  switch for GET_ITEM
+		</li>
+		<li>Creating types file </li>
+		<li>Ceating action file create action for GET_ITEM</li>
+		<li>Then work on contect(mapStateToProps , {GET_ITEM})</li>
+		<li>Work on propTypes isrRequired</li>
+		<li>work on mapStateToProps   ---  componentDidMount(this.props.getItems();)</li>
+		<li>change items to props</li>
+
+
+		<li>Then work for DELETE_ITEM action  bind,filter,onDeleteClick()</li>
+		<li>Then work on ItemModal onChange(input field of setState(name wala)),onSubmit()
+		    const newItem = {
+		        name : name
+		    };
+		    addItem(newItem);
+		    modelClose
+		</li>
+
+
+		<li>Connect backEnd axios install </li>
+		<li>initialState delete in reducer , loading wala case (action ma)</li>
+		<li>work on GET_ITEN first  dispatch 
+			export const getItems = () => dispatch => {
+				dispatch(Item_LOADING())
+				axios.get('/api/items')
+				     .then(res =>
+				     	dispatch({
+					     	type:GET_ITEMS,
+					     	payload:res.data
+				        })
+				      )
+			}
+			Change in reducer file  ---item:action.payload, loading
+	    </li>
+		<li>Similar for DELETE/ADD_ITEM</li>
+		
+
+		<li>Deploy to Heroku</li>
+
+
+		<li>Authorization with Json web token</li>
+
+		<li>This is for register the user</li>
+		<li>MAke Scheme for User  field (name email password date)</li>
+		<li>Make api/route POST  test with entries first such as !name(if cond)
+		   Second for one email User.findOne 
+		   third bcrypt password first then res back user
+		   Concept of Config 
+		   Then default.json file make Scret
+		   jwt.sign(four action in it) provide token in that
+		</li>
+
+
+		<li>This is for the register</li>
+		<li>Similar for login
+		    check for email / password 
+		    if condition
+		    Checking for Exiting user    User.findOne({email})</li>
+
+
+		<li>Work on middleware to protect the route</li>
+		<li>work on function
+		    const token = req.header('x-auth-token')
+		  Check for token   if(!token)
+		//Verufy Token
+		  try{
+		  	const decode = jwt.verify(token , config.get('jwtSecret'))</li>
+		
+
+
+		<li>Work on React front End login & register</li>
+		<li>Create error_reducer --- intialstate with msg,id,status
+		    two action get_error / clear_error</li>
+		<li>Create auth reducer with intialstate --token,isAuth,loading,user</li>
+		<li> action like user_loading,LOGIN_SUCCESS, LOGOUT_SUCCESS,</li>
+		<li>Work on authaaction loaduser fun inwhich axios.get(/api/auth/user , token) work on token --getState
+		    dispatch(returnErrors(err.response.data, err.response.status, 'REGISTER_FAIL'));
+		</li>
+		
+
+		<li>work on registerion</li>
+		<li>create action for register similar to loadUser</li>
+		<li>work on registerMOdel just like itemModel
+		   useEffect(error show on model) , automatic model close using authenticated
+	    </li>
+
+
+		<li>Work on logout simply create action of type logout_succes</li>
+		<li>work on login just like register</li>
+
+		<li>work on logout show on navbar when user login Appnavbar file hint isAuth state</li>
+		<li>Additem show only when user login & delete button only when user is login</li>
+		<li></li>
+		
+
+	</ul>
+
+</body>
+</html>
